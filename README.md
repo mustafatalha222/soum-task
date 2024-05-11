@@ -21,16 +21,14 @@ To run the app, follow these steps:
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
 3. Run the following command to start the app:
-
-- npm run start
+   `npm run start`
 
 4. The app will be launched, and you'll be presented with options to select as per your needs.
 
 ## Testing
 
 To run test cases for the app, execute the following command:
-
-- npm run test
+`npm run test`
 
 This will ensure that the app functions as expected and meets the necessary quality standards.
 
