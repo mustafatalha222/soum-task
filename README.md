@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# Welcome to your Soum Task App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to My App! This app was developed using Expo Init and utilizes Expo Router along with tab navigation featuring two bottom tabs.
 
-## Get started
+## Features
 
-1. Install dependencies
+### 1. Products
 
-   ```bash
-   npm install
-   ```
+- This tab allows users to browse through various products.
+- Users can select a product variant, and the selected variant will be displayed on top.
+- The selection process is facilitated by a Tree component that works seamlessly even on deep nested levels.
 
-2. Start the app
+### 2. Listing
 
-   ```bash
-    npx expo start
-   ```
+- The Listing tab presents all products in a hierarchical form, providing an organized view for users.
 
-In the output, you'll find options to open the app in a
+## Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+To run the app, follow these steps:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Run the following command to start the app:
 
-## Get a fresh project
+- npm run start
 
-When you're ready, run:
+4. The app will be launched, and you'll be presented with options to select as per your needs.
 
-```bash
-npm run reset-project
-```
+## Testing
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+To run test cases for the app, execute the following command:
 
-## Learn more
+- npm run test
 
-To learn more about developing your project with Expo, look at the following resources:
+This will ensure that the app functions as expected and meets the necessary quality standards.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Dependencies
 
-## Join the community
+- Expo Init
+- Expo Router
+- Tab Navigation
 
-Join our community of developers creating universal apps.
+## Support
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+If you encounter any issues or have any questions about the app, feel free to contact me via Email: mustafatalha222@gmail.com | Phone: +9234482127668.
+
+Happy exploring!
