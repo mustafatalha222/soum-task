@@ -1,4 +1,3 @@
-import { ScrollView } from "react-native";
 import { useState } from "react";
 import { ITreeNode } from "@/interfaces/TreeView";
 import TreeView from "@/components/TreeView";
@@ -7,21 +6,20 @@ import DisplayVariants from "@/components/DisplayVariants";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Products() {
-  const [selectedItems, setselectedItems] = useState<ITreeNode[]>([]);
+  const [selectedItems, setselectedItems] =
+    useState<ITreeNode[]>(sampleProducts);
 
   const handleSelectionChange = (selectedItems: ITreeNode[]) => {
     setselectedItems(selectedItems);
   };
 
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <DisplayVariants selectedItems={selectedItems} />
-        <TreeView
-          data={sampleProducts}
-          onSelectionChange={handleSelectionChange}
-        />
-      </ScrollView>
+    <SafeAreaView style={{ flex: 1 }}>
+      <DisplayVariants selectedItems={selectedItems} />
+      <TreeView
+        data={sampleProducts}
+        onSelectionChange={handleSelectionChange}
+      />
     </SafeAreaView>
   );
 }

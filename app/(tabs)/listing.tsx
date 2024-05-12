@@ -33,7 +33,7 @@ const renderCategoryOrProduct = (item: ITreeNode) => {
 
 const ListingPage = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
         <ThemedText style={styles.header} type="title">
           All Products Listing
@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     padding: 5,
+    marginBottom: 25,
   },
 });
 

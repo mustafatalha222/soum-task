@@ -67,6 +67,6 @@ const initializeCheckedState = (treeData: ITreeNode[]): ITreeNode[] => {
     const children = node.children
       ? initializeCheckedState(node.children)
       : undefined;
-    return { ...node, checked: false, children };
+    return { ...node, checked: node.checked || false, children };
   });
 };

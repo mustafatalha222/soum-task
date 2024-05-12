@@ -7,15 +7,6 @@ import { useExpandedNodes } from "@/hooks/useExpandedNodes";
 import { useCheckedState } from "@/hooks/useCheckedState";
 import { ThemedText } from "./ThemedText";
 
-const initializeCheckedState = (treeData: ITreeNode[]): ITreeNode[] => {
-  return treeData.map((node) => {
-    const children = node.children
-      ? initializeCheckedState(node.children)
-      : undefined;
-    return { ...node, checked: false, children };
-  });
-};
-
 const TreeView = ({ data, onSelectionChange }: ITreeViewProps) => {
   const { nodes, toggleNodeCheckbox } = useCheckedState(
     data,
@@ -29,15 +20,20 @@ const TreeView = ({ data, onSelectionChange }: ITreeViewProps) => {
       <View style={styles.nodeContainer}>
         <View style={styles.row}>
           <Checkbox
+            testID={`checkbox-${item.id}`}
             value={item.checked}
             onValueChange={() => toggleNodeCheckbox(item)}
           />
           <Pressable onPress={() => handleToggleNode(item.id)}>
             <View style={styles.ThemedTextContainer}>
-              <ThemedText type="defaultSemiBold">{item.name}</ThemedText>
-              <ThemedText style={styles.nodeDescription}>
-                {item.description}
+              <ThemedText type={item.children ? "defaultSemiBold" : "default"}>
+                {item.name}
               </ThemedText>
+              {item.description && (
+                <ThemedText style={styles.nodeDescription}>
+                  {item.description}
+                </ThemedText>
+              )}
             </View>
           </Pressable>
         </View>
@@ -52,6 +48,12 @@ const TreeView = ({ data, onSelectionChange }: ITreeViewProps) => {
     );
   };
 
+  if (!data.length)
+    return (
+      <ThemedText type="subtitle" style={styles.noData}>
+        No Data Found
+      </ThemedText>
+    );
   return (
     <FlatList
       data={nodes}
@@ -64,7 +66,6 @@ const TreeView = ({ data, onSelectionChange }: ITreeViewProps) => {
 const styles = StyleSheet.create({
   nodeContainer: {
     marginLeft: 20,
-    flexDirection: "column",
   },
   row: {
     flexDirection: "row",
@@ -83,6 +84,10 @@ const styles = StyleSheet.create({
     color: "#777",
     fontSize: 12,
     lineHeight: 12,
+  },
+  noData: {
+    margin: 20,
+    textAlign: "center",
   },
 });
 

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Variant Snapshot snapshot test for Display Variant correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#fff",
+      },
+      {
+        "minHeight": 50,
+        "padding": 5,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#11181C",
+        },
+        undefined,
+        undefined,
+        undefined,
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        },
+        undefined,
+        {
+          "marginBottom": 5,
+        },
+      ]
+    }
+  >
+    Selected Variants:
+  </Text>
+  <View
+    style={
+      [
+        {
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "gap": 3,
+          "overflow": "scroll",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#11181C",
+          },
+          {
+            "fontSize": 16,
+            "lineHeight": 24,
+          },
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          {
+            "backgroundColor": "#f0f0f0",
+            "borderRadius": 5,
+            "fontSize": 12,
+            "paddingHorizontal": 10,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      All 
+      Mobile
+    </Text>
+  </View>
+</View>
+`;
